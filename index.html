@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="./CSS/Stylesheet.css" />
+    <!-- Google Fonts -->
+   
+  </head>
+  <body>
+
+    
+    <main>
+
+     <!-- Navbar Section starts -->
+  <nav class="position-fixed w-100 z-3">
+    <div class="div position-absolute z-1">
+        <div class="vh-100 d-flex">
+            <div id="navbar-content" class="nav-content d-flex flex-column justify-content-between position-relative end-100 p-4 bg-dark">
+                <div class="nav-links">
+                    <ul class="list-unstyled text-light overflow-hidden ">
+                        <li class="py-2 position-relative searchBtn" role="button">Search</li>
+                        <li class="py-2 position-relative categoryBtn"role="button">Categories</li>
+                        <li class="py-2 position-relative areaBtn"role="button">Area</li>
+                        <li class="py-2 position-relative ingredientsBtn"role="button">Ingredients</li>
+                        <li class="py-2 position-relative contactBtn"role="button">Contact-Us</li>
+                    </ul>
+                </div>
+                <div class="nav-footer text-light">
+                    <div class="icons mb-2">
+                        <i class="fa-brands fa-facebook p-2"></i>
+                        <i class="fa-brands fa-twitter p-2"></i>
+                        <i class="fa-solid fa-globe p-2"></i>
+                    </div>
+                    <div class="footer">
+                        <p>
+                          Created By Moustafa Mouhamed
+                          <br />All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                id="navbar-button"
+                class="nav p-1 bg-light d-flex flex-column justify-content-between align-items-center position-absolute vh-100">
+                <div class="logo">
+                    <img
+                        src="./img/logo.png"
+                        class="w-100"
+                        alt="logo"
+                    />
+                </div>
+                <div class="nav-btn cursor-pointer">
+                    <i id="open" class="fa-solid fa-bars fa-2x"></i>
+                </div>
+                <div class="nav-icons">
+                    <i class="fa-solid fa-globe d-block p-2"></i>
+                    <i class="fa-solid fa-share-nodes p-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+ <!-- Navbar Section ends -->
+
+   <!-- Main section starts  -->
+
+   <!-- Loading screen section starts -->
+   <div style="display: none;" id="loadingScreen">
+     <div class="vh-100 d-flex justify-content-center align-items-center">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+  </div>
+   <!-- Loading screen section ends -->
+
+   <!-- Search section starts -->
+<section class="searchSection Search py-4" style="display:none">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-lg-2">
+      <div class="col">
+        <input type="text" placeholder="Search By Name" class="form-control my-2" id="searchByNameInput">
+      </div>
+      <div class="col">
+        <input type="text" placeholder="Search By First Letter" class="form-control my-2" maxlength="1" id="searchByFirstLetterInput">
+      </div>
+    </div>
+   
+  </div>
+</section>
+<!-- Search section ends -->
+
+<section class="main-section ">
+  
+    <div class="container">
+      <div class="row" id="mainSection">
+     
+        </div>
+      </div>
+  </div>
+</section>
+<!-- Main section ends -->
+
+
+
+<!-- Instructions section starts -->
+<section class="instructions">
+ 
+</section>
+<!-- Instructions section ends -->
+
+<!-- Categories sections starts -->
+<section class="Categories p-5 " style="display:none">
+  <div class="container">
+      <div class="row CategoriesRow">
+        
+        </div>
+      </div>
+</section>
+<!-- Categories sections ends -->
+
+<!-- Area Section starts -->
+<section class="Area p-5 " style="display:none">
+  <div class="container">
+    <div class="row rowArea">
+    </div>
+  </div>
+</section>
+<!-- Area Section ends -->
+
+<section class="Ingredients p-5 " style="display:none">
+  <div class="container">
+    <div class="row ingredientsRow">
+    
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us section starts -->
+<section class="Contact-Us " style="display:none">
+ 
+  <div class="container">
+    <div class="row row-cols-1 row-cols-lg-2 vh-100 align-content-center">
+      <div class="col">
+        <input type="text" placeholder="Enter Your Name" class="form-control my-2" id="username">
+        <div id="nameAlert" class="alert alert-danger mt-2 d-none">
+          Special characters and numbers are not allowed
+        </div>
+      </div> 
+        <div class="col">
+        <input type="email" placeholder="Enter Your Email" class="form-control my-2" id="email">
+        <div id="emailAlert" class="alert alert-danger mt-2 d-none">
+          Email is not valid *example@yyy.zzz
+        </div>
+      </div>
+      <div class="col">
+        <input type="number" placeholder="Enter Your Phone Number" class="form-control my-2" id="phone">
+        <div id="phoneAlert" class="alert alert-danger mt-2 d-none">
+          Enter a valid phone number
+        </div>
+      </div>
+      <div class="col">
+        <input type="number" placeholder="Enter Your Age" class="form-control my-2" id="age">
+        <div id="ageAlert" class="alert alert-danger mt-2 d-none">
+          Enter a valid age
+        </div>
+      </div>
+      <div class="col">
+        <input type="password" placeholder="Enter Your password" class="form-control my-2" id="password">
+        <div id="passwordAlert" class="alert alert-danger mt-2 d-none">
+          Enter a valid password *Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character*
+        </div>
+      </div>
+      <div class="col">
+        <input type="password" placeholder="Re-enter Your password" class="form-control my-2" id="repassword" >
+        <div id="repasswordAlert" class="alert alert-danger mt-2 d-none">
+          Enter a valid password *Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character*
+        </div>
+      </div>
+     
+   
+      <div class="m-auto text-center my-3">
+        <button id="submitBtn" disabled="true" class="btn btn-outline-danger px-4 mt-3 ">Submit</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us section ends -->
+
+
+
+</main>
+
+
+
+            <!--JQuery Local Link-->
+            <script src="./JS/jquery-3.6.3.min.js"></script>
+           <!--Bootstrap JS Link-->
+           <script src="./JS/bootstrap.bundle.min.js"></script>
+           <!-- JavaScript Local File -->
+           <script src="./JS/main.js"></script>
+  </body>
+</html>
